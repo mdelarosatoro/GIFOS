@@ -1,0 +1,284 @@
+@import ../_mixins
+@import ../_variables
+    
+*
+    @include format-document
+
+@import ../_header
+
+@import ../_footer
+
+@import ../_darkmode
+
+.main__hero, .main__trending
+    display: none
+
+.crear-gifos
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-top: 30px
+    padding-bottom: 30px
+    min-height: 80vh
+
+.screen
+    width: 688px
+    height: 390px
+    border: 1px solid $primary-color
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    padding-top: 134px
+    padding-bottom: 48px
+
+    @keyframes spin
+        100%
+            transform: rotate(1turn)
+
+    .cinta1
+        position: absolute
+        left: -208px
+        bottom: 195px
+        width: 46px
+        height: 46px
+        z-index: 10
+        animation: spin 1s linear infinite
+
+
+    .cinta2
+        position: absolute
+        width: 64px
+        height: 64px
+        left: -160px
+        bottom: 195px
+        z-index: 10
+        animation: spin 2s linear infinite
+
+
+    .camara
+        position: absolute
+        left: -200px
+        width: 115px
+        height: 110px
+
+    @keyframes shine
+        0%
+            opacity: 1
+        50%
+            opacity: 0.6
+        100%
+            opacity: 1
+
+    .luz
+        position: absolute
+        left: -84px
+        bottom: 113px
+        animation: shine 2s ease infinite
+
+    .rollo
+        position: absolute
+        bottom: -80px
+        right: -209px
+
+    .video
+        width: 480px
+        height: 320px
+        position: absolute
+        top: 40px
+
+    .overlay
+        position: absolute
+        top: 40px
+        left: 130px
+        width: 428px
+        height: 320px
+        background-color: #572EE5
+        opacity: 0.6
+        z-index: 100
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        .button-div
+            position: absolute
+            display: flex
+            top: 10px
+            right: 10px
+
+            .link-anchor
+                display: block
+                width: 32px
+                height: 32px
+            
+                .download-button
+
+            .link-button
+                margin-left: 10px
+
+        .loader
+            margin-bottom: 10px
+            animation: load 2s linear infinite
+
+        @keyframes load
+            100%
+                transform: rotate(1turn)
+
+        .uploading-text
+            font-family: $primary-font
+            font-size: 15px
+            color: white
+            text-align: center
+            opacity: 1
+
+        .tick
+            margin-bottom: 14px
+
+        .success-text
+            font-family: $primary-font
+            font-size: 15px
+            color: white
+            text-align: center
+
+    .nodisplay
+        display: none
+
+    &__title
+        width: 550px
+        height: 70px
+        display: block
+        font-family: $primary-font
+        font-size: 25px
+        text-align: center
+        line-height: 35px
+        color: $primary-color
+        margin-bottom: 3px
+
+    .special-word
+        color: $secondary-color
+
+    &__p
+        font-family: $searchbox-font
+        font-size: 16px
+        color: #000
+        text-align: center
+        line-height: 29px
+        width: 446px
+        height: 135px
+        display: block
+
+    .step-one-title
+        font-family: $primary-font
+        font-size: 25px
+        color: $primary-color
+        text-align: center
+        line-height: 35px
+
+    .step-one-text
+        font-family: $searchbox-font
+        font-size: 16px
+        color: #000000
+        text-align: center
+        line-height: 28px
+
+    .corner
+        width: 25px
+        border-top: 1px solid $secondary-color
+
+    .corner1
+    .corner2
+        transform: rotate(-90deg) translateY(-12.5px) translateX(13px)
+
+    .corner-container
+        position: absolute
+
+    .c1
+        top: 30px
+        left: 10px
+        transform: rotate(90deg)
+
+    .c2
+        top: 20px
+        right: 20px
+        transform: rotate(-180deg)
+
+    .c3
+        bottom: 20px
+        left: 20px
+
+    .c4
+        bottom: 30px
+        right: 10px
+        transform: rotate(-90deg)
+
+.step-container
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 24px
+    margin-bottom: 19px
+    position: relative
+
+    .step
+        display: block
+        width: 32px
+        height: 32px
+        color: $primary-color
+        font-family: $searchbox-font
+        font-size: 18px
+        text-align: center
+        border: 1px solid $primary-color
+        border-radius: 50%
+        line-height: 32px
+    
+    .s1, .s2
+        margin-right: 26px
+
+    .step-active
+        color: white
+        background-color: $primary-color
+
+    .timer-div
+        position: absolute
+        left: 343px
+
+        .timer-display
+            font-family: $primary-font
+            font-weight: 600
+            color: $primary-color
+            letter-spacing: 0
+            text-align: center
+            line-height: 22px
+
+    .restart-recording-button
+        font-family: $primary-font
+        font-size: 13px
+        color: $primary-color
+        letter-spacing: 0
+        text-align: center
+        cursor: pointer
+        border-bottom: 2px solid $secondary-color
+        font-weight: 600
+        width: 131px
+        height: 16px
+        display: block
+        margin-left: -54px
+
+.hr
+    width: 795.9px
+    border-top: 7px solid $primary-color
+
+.start-button, .record-button, .finish-recording-button, .upload-button
+    @include create-gif-buttons
+
+.start-button:hover, .record-button:hover, .finish-recording-button:hover, .upload-button:hover
+    @include create-gif-buttons-hover
+
+
+.start-button-nodisplay, .record-button-nodisplay, .finish-recording-button-nodisplay, .upload-button-nodisplay
+    display: none
+
+    

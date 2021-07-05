@@ -1,0 +1,276 @@
+
+@import ./_variables
+
+.fullscreen-overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 100%
+    width: 100%
+    background-color: rgba(255, 255, 255, 0.90)
+    z-index: 10000
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &__exit-button
+        color: $primary-color
+        position: absolute
+        top: 64px
+        right: 39.3px
+
+    .fullscreen-gif-container
+        display: flex
+        flex-direction: column
+        // position: absolute
+        // left: 29px
+        // top: 156px
+
+        &__gif
+            width: 318px
+            height: 245px
+
+        &__card-bottom
+            display: grid
+            grid-template-columns: 70% 30%
+            width: 318px
+            margin-top: 20px
+
+            &__text-container
+                display: flex
+                flex-direction: column
+                width: 100%
+
+                &__username
+                    font-family: $searchbox-font
+                    font-size: 15px
+                    margin-left: 5px
+                    font-weight: 200
+                    margin-top: 14px
+                    margin-bottom: 6px
+
+                &__gif-title
+                    font-family: $searchbox-font
+                    font-size: 16px
+
+            &__icon-container
+                display: flex
+                justify-content: space-around
+                align-items: center
+
+                &__icons
+                    color: $primary-color
+
+@media screen and (min-width: 1440px)
+    .fullscreen-overlay
+
+        &__exit-button
+            cursor: pointer
+
+        .fullscreen-gif-container
+
+            &__gif
+                width: 695px
+                height: 385px
+
+            &__card-bottom
+                width: 100%
+
+                &__text-container
+
+                    &__username
+
+
+                    &__gif-title
+
+
+                &__icon-container
+                    justify-content: flex-end
+
+                    &__icons
+                        border: 1px solid #CED7E1
+                        border-radius: 6px
+                        padding: 8px
+                        margin-left: 21px
+
+
+.header
+    height: 100px
+    background-color: white
+    width: 100vw
+    border-top: 5px solid #572EE5
+    padding-left: 22px
+    padding-right: 26px
+    position: relative
+    
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+        padding-top: 29px
+        padding-bottom: 17.2px
+
+    &__logo
+        width: 48.8px
+        height: 48.8px
+
+    &__hamburger-button-container
+        width: 15px
+        height: 14px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__hamburger-line
+        height: 2px
+        width: 100%
+        background-color: $primary-color
+        transition: all 0.5s ease
+
+    #hamburger-button-checkbox
+        display: none
+
+    &__hamburger-top
+        transform-origin: 0% 0%
+
+    &__hamburger-middle
+
+    &__hamburger-bottom
+        transform-origin: 0% 100%
+
+    input:checked ~ label > .header__hamburger-button-container > .header__hamburger-top
+        transform: rotate(45deg) translate(-1px, 0px)
+    
+    input:checked ~ label > .header__hamburger-button-container > .header__hamburger-middle
+        opacity: 0
+
+    input:checked ~ label > .header__hamburger-button-container > .header__hamburger-bottom
+        transform: rotate(-45deg) translate(1px, -2px)
+
+    input:checked ~ .header__nav
+        transform: scale(1,1)
+        transition: all 0.5s ease
+        display: block
+
+    &__nav
+        background-color: $primary-color
+        width: 100vw
+        height: 484px
+        position: absolute
+        left: 0
+        top: 100px
+        z-index: 1000
+        transform: scale(1,0)
+        transition: all 0.5s ease
+        transform-origin: top
+        opacity: 0.90
+
+        &__ul
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-top: 32px
+
+        &__li
+
+        &__link
+            text-decoration: none
+            color: white
+            font-family: $primary-font
+            font-size: 15px
+            text-align: center
+            line-height: 30px
+
+
+        &__span-line
+            width: 41px
+            display: block
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+            margin-top: 11px
+            margin-bottom: 13.9px
+
+//EL LIMITE DEBERÁ SER EL MISMO EN EL QUE APARECE EL MENú
+@media screen and (max-width: 1439px)
+    .hide-on-mobile
+        display: none
+
+@media screen and (min-width: 1440px)
+    .header
+        padding-left: 156px
+        padding-right: 156px
+        position: sticky
+        top: 0
+        z-index: 1000
+
+        &__container
+
+
+        &__logo
+            width: 59.1px
+            height: 59.1px
+
+        &__hamburger-button-container
+            display: none
+
+        &__nav
+            position: static
+            transform: scale(1,1)
+            height: auto
+            background-color: white
+
+            &__ul
+                flex-direction: row
+                justify-content: flex-end
+                margin-top: 0
+                
+            &__li
+
+            &__link
+                color: $primary-color
+                text-transform: uppercase
+                margin-right: 42px
+                font-weight: 600
+                cursor: pointer
+
+            &__link:hover
+                border-bottom: 2px solid $secondary-color
+
+            &__span-line
+                display: none
+
+    .hide-on-desktop
+        display: none
+
+//NAVBAR SEARCHBAR
+
+@media screen and (max-width: 1439px)
+    .navbar-search-container
+        display: none
+
+@media screen and (min-width: 1440px)
+    .navbar-search-container
+        position: relative
+
+        .navbar-search
+            border: 1px solid $primary-color
+            width: 334px
+            height: 50px
+            border-radius: 27px
+            padding-left: 55px
+            margin-left: 119px
+            font-family: $searchbox-font
+            font-size: 16px
+            text-align: left
+
+        .navbar-search-icon
+            position: absolute
+            color: $primary-color
+            right: 18px
+            top: 18px
+
+    .navbar-search-container-nodisplay
+        display: none
+    

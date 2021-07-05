@@ -1,0 +1,107 @@
+@import ../_mixins
+@import ../_variables
+
+    
+*
+    @include format-document
+
+@import ../_header
+
+@import ../_main
+
+@import ../_footer
+
+@import ../_darkmode
+    
+.favorites
+    
+    &__heading-container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding-top: 5px
+        margin-bottom: 46px
+
+    &__heart-icon
+        width: 28px
+        height: 21px
+        margin-bottom: 7px
+
+    &__heading
+        color: $primary-color
+        font-family: $primary-font
+        font-size: 25px
+        text-align: center
+        font-weight: 600
+
+    .main__hero__search-results
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-right: 21px
+        margin-left: 21px
+
+        .main__hero__search-results__search-grid
+            column-gap: 21px
+            row-gap: 25px
+
+            .search-result-wrapper
+
+
+.remove-hero
+    display: none
+
+.contentdiv-favorites
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .heart-img
+        width: 150px
+        height: 150px
+        display: block
+
+    .favorite-text
+        font-family: $primary-font
+        color: #50E3C2
+        font-size: 22px
+        text-align: center
+        font-weight: 600
+        line-height: 33px
+        margin-bottom: 137px
+
+.active-link
+    color: #9CAFC3
+
+@media screen and (min-width: 1440px)
+    .favorites
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+
+.trending-container-desktop
+    display: none
+
+.trending-desktop-wrapper
+    display: none
+
+@media screen and (min-width: 1440px)
+    .trending-desktop-wrapper
+        display: flex
+
+    .trending-container-desktop
+        display: flex
+        margin-left: -40px
+        margin-right: 25px
+
+    .trending-img-nodisplay
+        display: none
+
+    .left-button
+        position: relative
+        z-index: 1000

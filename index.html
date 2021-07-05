@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto GIFOS</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/4093632a17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="./index.html" class="logo-link"><img src="./img/logo-mobile.svg" alt="GIFOS logo" class="header__logo"></a>
+            
+            <div class="navbar-search-container navbar-search-container-nodisplay">
+                <input type="text" class="navbar-search" placeholder="Busca GIFOS y más">
+                <i class="navbar-search-icon fas fa-search fa-lg"></i>
+            </div>
+
+
+            <input type="checkbox" name="hamburger-button" id="hamburger-button-checkbox">
+            <label for="hamburger-button-checkbox" class="header__hamburger-button-label">
+                <div class="header__hamburger-button-container">
+                    <span class="header__hamburger-top header__hamburger-line"></span>
+                    <span class="header__hamburger-middle header__hamburger-line"></span>
+                    <span class="header__hamburger-bottom header__hamburger-line"></span>
+                </div>
+            </label>
+            <nav class="header__nav">
+                <ul class="header__nav__ul"> 
+                    <li class="header__nav__li"><a id="darkmode-btn" class="header__nav__link">Modo Nocturno</a></li>
+                    <span class="header__nav__span-line"></span>
+                    <li class="header__nav__li"><a href="./favorites.html" class="header__nav__link">Favoritos</a></li>
+                    <span class="header__nav__span-line"></span>
+                    <li class="header__nav__li"><a href="./mis-gifos.html" class="header__nav__link">Mis GIFOS</a></li>
+                    <span class="header__nav__span-line hide-on-desktop"></span>
+                    <li class="header__nav__li hide-on-desktop"><a href="./crear-gifo.html" class="header__nav__link">Crear GIFO</a></li>
+
+                    <li class="header__nav__li"><a href="crear-gifo.html"><img src="./img/button-crear-gifo.svg" alt="Botón para crear gifos." class="create-gif-button hide-on-mobile"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main__hero">
+            <h1 class="main__hero__heading">Inspírate, busca, guarda y <span class="main__hero__span-line-skip">crea los mejores <span class="main__hero__span">GIFOS</span></span></h1>
+            <img src="./img/ilustra_header.svg" alt="ilustración de tres personas saludando" class="main__hero__img">
+
+
+                <div class="main__hero__input-container">
+                    <input type="text" class="main__hero__input-container__searchbox" placeholder="Busca GIFOS y más">
+                    <i class="main__hero__input-container__input-icon fas fa-search fa-lg"></i>
+                    <div class="main__hero__input-container__searchbox-suggestions-container">
+    
+                    </div>
+                </div>
+
+            
+            <div class="main__hero__trending-container">
+                <h2 class="main__hero__trending-container__sub-heading">Trending:</h2>
+                <p class="main__hero__trending-container__paragraph"></p>
+            </div>
+            
+            <div class="main__hero__search-results">
+    
+            </div>
+            
+        </section>
+        
+        
+        <section class="main__trending">
+            <h2 class="main__trending__sub-heading">Trending GIFOS</h2>
+            <p class="main__trending__paragraph">Mira los últimos <span class="main__trending__span">GIFOS de nuestra comunidad.</span></p>
+
+            
+            <div class="main__trending__img-container trending-img-nodisplay">
+
+            </div>
+
+            <div class="trending-desktop-wrapper">
+                <img src="./img/button-slider-left.svg" alt="" class="left-button">
+                <div class="trending-container-desktop main__trending__img-container">               
+                </div>
+                <img src="./img/Button-Slider-right.svg" alt="" class="right-button">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p class="footer__paragraph-title">Compartir en:</p>
+        <div class="footer__social-container">
+            <a href="https://www.facebook.com" class="footer__social-container-link"><i class="footer__social-container__social-icon fab fa-facebook-f fa-lg"></i></a>
+
+            <a href="https://www.twitter.com" class="footer__social-container-link"><i class="footer__social-container__social-icon fab fa-twitter fa-lg"></i></a>
+
+            <a href="https://www.instagram.com" class="footer__social-container-link"><i class="footer__social-container__social-icon fab fa-instagram fa-lg"></i></a>
+        </div>
+        <p class="footer__copyright">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="./scripts/app.js"></script>
+    <script src="./scripts/darkmode.js"></script>
+    <script src="./scripts/footer.js"></script>
+</body>
+</html>
