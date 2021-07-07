@@ -52,7 +52,6 @@ function buildTrendingGifs(parsedGiphyResponse) {
     //desktop version of mobile gifs
     const trendingContainerDesktop = document.querySelector(".trending-container-desktop");
     const giphyCopy = parsedGiphyResponse.data.slice();
-    console.log(giphyCopy);
     const groupsOfThreeArr = [];
     for (let i = 1; i <= 7; i++) {
         let auxiliaryArr = [];
@@ -65,10 +64,8 @@ function buildTrendingGifs(parsedGiphyResponse) {
     }
 
     //The starting active array must be in the first index
-    console.log(groupsOfThreeArr);
     let index = 0;
     let activeArr = groupsOfThreeArr[index];
-    console.log(activeArr);
     //now we need to build the first three
     for (const gif of activeArr) {
         create3Gifs(gif);
@@ -546,7 +543,6 @@ function createOverlay(gif) {
 const header = document.querySelector("header");
 
 function createFullscreenOverlay(gif) {
-    console.log(gif);
 
     //create screen overlay
     const fullscreenOverlay = document.createElement("div");
@@ -728,7 +724,6 @@ const navbar = document.querySelector(".navbar-search");
 const navbarIcon = document.querySelector(".navbar-search-icon");
 const x = window.matchMedia("(min-width: 1440px)");
 window.addEventListener("scroll", (e) => {
-    console.log(window.scrollY)
     if (x.matches) {
         if (window.scrollY > 0) {
             navbarSearch.classList.remove("navbar-search-container-nodisplay");

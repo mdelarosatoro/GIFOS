@@ -122,20 +122,25 @@ function toggleDarkMode() {
         crearGifBtn.src = "../img/button-crear-gifo.svg"
     }
 
-    const crearGifBackground = document.querySelector(".crear-gifos");
-    crearGifBackground.classList.toggle("darkmode-bg-dark");
+    const path = window.location.pathname;
 
-    const screen = document.querySelector(".screen");
-    screen.classList.toggle("darkmode-screen");
-
-    const hr = document.querySelector(".hr");
-    hr.classList.toggle("darkmode-hr")
-
-    const startBtn = document.querySelector(".start-button");
-    startBtn.classList.toggle("darkmode-start-btn");
-
-    const steps = document.querySelectorAll(".step");
-    for (const step of steps) {
-        step.classList.toggle("darkmode-steps");
+    if (path === "/crear-gifo.html") {
+        const crearGifBackground = document.querySelector(".crear-gifos");
+        crearGifBackground.classList.toggle("darkmode-bg-dark");
+    
+        const screen = document.querySelector(".screen");
+        screen.classList.toggle("darkmode-screen");
+    
+        const hr = document.querySelector(".hr");
+        hr.classList.toggle("darkmode-hr")
+    
+        const startBtn = document.querySelector(".start-button");
+        startBtn.classList.toggle("darkmode-start-btn");
+    
+        const steps = document.querySelectorAll(".step");
+        for (const step of steps) {
+            step.classList.toggle("darkmode-steps");
+        }
     }
+
 }
