@@ -757,3 +757,9 @@ function searchActionNav() {
     setTimeout(function() {searchTitle.scrollIntoView({behavior: "smooth"})}, 500);
 }
 //END OF NAVBAR SEARCH
+
+if (localStorage.getItem("darkmode") === "true") {
+    crearGifBtn.src = "../img/CTA-crar-gifo-modo-noc.svg";
+} else if (localStorage.getItem("darkmode") === "false") {
+    crearGifBtn.src = "../img/button-crear-gifo.svg"
+}

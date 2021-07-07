@@ -570,3 +570,9 @@ crearGifBtn.addEventListener("mouseover", (e) => {
 crearGifBtn.addEventListener("mouseout", (e) => {
     e.target.src = "../img/button-crear-gifo.svg";
 });
+
+if (localStorage.getItem("darkmode") === "true") {
+    crearGifBtn.src = "../img/CTA-crar-gifo-modo-noc.svg";
+} else if (localStorage.getItem("darkmode") === "false") {
+    crearGifBtn.src = "../img/button-crear-gifo.svg"
+}
