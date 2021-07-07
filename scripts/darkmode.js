@@ -116,11 +116,11 @@ function toggleDarkMode() {
 
     const crearGifBtn = document.querySelector(".create-gif-button");
 
-    // if (localStorage.getItem("darkmode") === "true") {
-    //     crearGifBtn.src = "../img/CTA-crar-gifo-modo-noc.svg";
-    // } else if (localStorage.getItem("darkmode") === "false") {
-    //     crearGifBtn.src = "../img/button-crear-gifo.svg"
-    // }
+    if (localStorage.getItem("darkmode") === "true") {
+        crearGifBtn.src = "../img/CTA-crar-gifo-modo-noc.svg";
+    } else if (localStorage.getItem("darkmode") === "false") {
+        crearGifBtn.src = "../img/button-crear-gifo.svg"
+    }
 
     const path = window.location.pathname;
 
