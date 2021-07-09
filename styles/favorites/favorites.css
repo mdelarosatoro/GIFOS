@@ -1288,5 +1288,14 @@
     position: relative;
     z-index: 1000;
   }
+  .main__hero__search-results__search-grid {
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
+  }
+}
+
+.extended-column-gap {
+  -webkit-column-gap: 100px !important;
+          column-gap: 100px !important;
 }
 /*# sourceMappingURL=favorites.css.map */

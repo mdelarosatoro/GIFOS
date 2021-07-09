@@ -54,7 +54,7 @@ async function addFavorites() {
         
         const favorites = arrayFavorites.join(",");
         const favoritesToAdd = await searchFavorites(favorites);
-        //En la siguiente función se malogra el código
+
         createSearchElements(favoritesToAdd);
     } catch (err) {
         console.error(err);
@@ -120,7 +120,11 @@ function buildFavoritesGrid(favoritesToAdd) {
     //loop through the favorite array and build the grid
     for (const gif of favoritesToAdd) {
         let wrapper = document.createElement("div");
-        wrapper.classList.add("search-result-wrapper")
+        wrapper.classList.add("search-result-wrapper");
+
+        if (favoritesToAdd.length === 2 || favoritesToAdd.length === 3) {
+            favoriteGrid.classList.add("extended-column-gap");
+        }
 
         let currentGifURL = gif.images.fixed_height_small.url;
 
