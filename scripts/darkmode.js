@@ -123,6 +123,7 @@ function toggleDarkMode() {
     }
 
     const path = window.location.pathname;
+    console.log(path);
 
     if (path === "/crear-gifo.html") {
         const crearGifBackground = document.querySelector(".crear-gifos");
