@@ -90,18 +90,14 @@ function createSearchElements(favoritesToAdd) {
 
         let dividedArray = divideArrayOver12(favoritesToAdd);
         //HASTA ACA FUNCIONA EL CODIGO, DIVIDED ARRAY RESULTA EN UN ARRAY DE ARRAYS DE 12 GIFS
-        console.log(dividedArray);
 
         //AHORA DEBEMOS RENDERIZAR EL PRIMER ARRAY DE 12 FAVORITOS
         let currentArray = dividedArray.splice(0,1);
-        console.log(currentArray);
-        console.log(dividedArray);
 
         const favoritesGridInicial = buildFavoritesGrid(currentArray[0]);
 
         moreButton.addEventListener("click", (e) => {
             currentArray = dividedArray.splice(0,1);
-            console.log(currentArray);
             let favoritesGrids = buildFavoritesGrid(currentArray[0]);
 
             e.target.parentElement.insertBefore(favoritesGrids, moreButton);
@@ -150,8 +146,6 @@ function buildFavoritesGrid(favoritesToAdd) {
 function divideArrayOver12(favoritesArray) {
     const numberOfArraysNeeded = Math.ceil(favoritesArray.length / 12);
     let favoritesArrayCopy = favoritesArray.slice();
-    console.log(favoritesArray);
-    console.log(favoritesArrayCopy);
     let dividedFavoritesArray = [];
 
         for (let i = 1; i <= numberOfArraysNeeded; i++) {    
@@ -162,7 +156,6 @@ function divideArrayOver12(favoritesArray) {
                 dividedFavoritesArray.push(favoritesArrayCopy.splice(0,favoritesArrayCopy.length));
             }
         }
-        console.log(dividedFavoritesArray);
     return dividedFavoritesArray;
 }
 
@@ -261,7 +254,6 @@ function buildTrendingGifs(parsedGiphyResponse) {
         //desktop version of mobile gifs
         const trendingContainerDesktop = document.querySelector(".trending-container-desktop");
         const giphyCopy = parsedGiphyResponse.data.slice();
-        console.log(giphyCopy);
         const groupsOfThreeArr = [];
         for (let i = 1; i <= 7; i++) {
             let auxiliaryArr = [];
@@ -274,10 +266,8 @@ function buildTrendingGifs(parsedGiphyResponse) {
         }
     
         //The starting active array must be in the first index
-        console.log(groupsOfThreeArr);
         let index = 0;
         let activeArr = groupsOfThreeArr[index];
-        console.log(activeArr);
         //now we need to build the first three
         for (const gif of activeArr) {
             create3Gifs(gif);

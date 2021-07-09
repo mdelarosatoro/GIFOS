@@ -17,14 +17,6 @@ if (localStorage.getItem("mis-gifos") === null) {
     localStorage.setItem("mis-gifos", "[]");
 }
 
-// fetch(`https://api.giphy.com/v1/gifs/9XCMzsWrXbQq056vtb?api_key=${API_KEY}`)
-// .then((response) => {
-//     return response.json();
-// })
-// .then((result) => {
-//     console.log(result);
-// })
-
 //hide the video player initially
 videoPlayer.classList.add("nodisplay");
 
@@ -149,13 +141,10 @@ startButton.addEventListener("click", () => {
 
                     const response = await fetch(`https://upload.giphy.com/v1/gifs?api_key=${API_KEY}&file=${form})}`, { method: "POST", body: form });
                     const result = await response.json();
-                    console.log(result);
 
                     //storing the gif id into local storage
                     const misGifosArr = JSON.parse(localStorage.getItem("mis-gifos"));
-                    console.log(misGifosArr);
                     misGifosArr.unshift(result.data.id);
-                    console.log(misGifosArr);
 
                     localStorage.setItem("mis-gifos", JSON.stringify(misGifosArr));
 
@@ -184,12 +173,10 @@ startButton.addEventListener("click", () => {
                         downloadButton.addEventListener("click", async () => {
                             //agregar funcionalidad de click
                             const hiddenLink = document.createElement("a");
-                            console.log(result.data.id);
                             const response = await fetch(`https://api.giphy.com/v1/gifs/${result.data.id}?api_key=${API_KEY}`);
                             const results = await response.json();
                             const blobURL = await fetch(results.data.images.original.url)
                             const blobFile = await blobURL.blob();
-                            console.log(results);
                             
                             hiddenLink.download = "MyGif";
                             hiddenLink.href = window.URL.createObjectURL(blobFile);
@@ -198,7 +185,6 @@ startButton.addEventListener("click", () => {
                         });
 
                         const linkButton = document.createElement("img");
-                        console.log(result.data);
                         linkButton.src = "../img/icon-link-normal.svg";
                         linkButton.classList.add("link-button");
                         linkButton.addEventListener("mouseover", () => {
