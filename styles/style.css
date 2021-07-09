@@ -43,6 +43,7 @@
   position: absolute;
   top: 64px;
   right: 39.3px;
+  cursor: pointer;
 }
 
 .fullscreen-overlay .fullscreen-gif-container {
@@ -107,6 +108,7 @@
 
 .fullscreen-overlay .fullscreen-gif-container__card-bottom__icon-container__icons {
   color: #572EE5;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1440px) {
@@ -176,6 +178,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
 }
 
 .header__hamburger-line {
@@ -1016,6 +1019,7 @@
   .left-button {
     position: relative;
     z-index: 1000;
+    cursor: pointer;
   }
 }
 
