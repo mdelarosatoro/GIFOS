@@ -117,9 +117,9 @@ function toggleDarkMode() {
     const crearGifBtn = document.querySelector(".create-gif-button");
 
     if (localStorage.getItem("darkmode") === "true") {
-        crearGifBtn.src = "../img/CTA-crar-gifo-modo-noc.svg";
+        crearGifBtn.src = "./img/CTA-crar-gifo-modo-noc.svg";
     } else if (localStorage.getItem("darkmode") === "false") {
-        crearGifBtn.src = "../img/button-crear-gifo.svg"
+        crearGifBtn.src = "./img/button-crear-gifo.svg"
     }
 
     const path = window.location.pathname;
