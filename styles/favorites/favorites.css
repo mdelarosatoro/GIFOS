@@ -362,6 +362,10 @@
   }
 }
 
+.header__nav__li {
+  cursor: pointer;
+}
+
 /*  DARK MODE  */
 /*Colors*/
 .main__hero {

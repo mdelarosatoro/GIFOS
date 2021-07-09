@@ -361,6 +361,10 @@
   }
 }
 
+.header__nav__li {
+  cursor: pointer;
+}
+
 /*  DARK MODE  */
 /*Colors*/
 .footer {
