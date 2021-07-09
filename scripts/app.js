@@ -324,7 +324,7 @@ function getSearchResults(searchQuery) {
                 createSearchElements(addSearchItemsToArray(parsedQueryResponse), searchResultsNode);
             } else if (parsedQueryResponse.data.length === 0) {
                 const ouchIcon = document.createElement("img");
-                ouchIcon.src = "../img/icon-busqueda-sin-resultado.svg";
+                ouchIcon.src = "./img/icon-busqueda-sin-resultado.svg";
                 ouchIcon.classList.add("ouch-icon");
 
                 const failedSearchText = document.createElement("p");

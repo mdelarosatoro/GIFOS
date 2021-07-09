@@ -34,7 +34,7 @@ function addStaticDOMFavorites() {
 
 
     const heartImg = document.createElement("img");
-    heartImg.src = "../img/icon-mis-gifos-sin-contenido.svg";
+    heartImg.src = "./img/icon-mis-gifos-sin-contenido.svg";
     heartImg.classList.add("heart-img")
 
     const favoriteText = document.createElement("p");
