@@ -565,8 +565,8 @@ function createDownloadButton(gif) {
 
 const crearGifBtn = document.querySelector(".create-gif-button");
 crearGifBtn.addEventListener("mouseover", (e) => {
-    e.target.src = "../img/CTA-crear-gifo-hover.svg";
+    e.target.src = "./img/CTA-crear-gifo-hover.svg";
 });
 crearGifBtn.addEventListener("mouseout", (e) => {
-    e.target.src = "../img/button-crear-gifo.svg";
+    e.target.src = "./img/button-crear-gifo.svg";
 });

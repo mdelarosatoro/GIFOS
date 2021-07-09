@@ -402,8 +402,8 @@ function removeAllChildren(parent) {
 
 const crearGifBtn = document.querySelector(".create-gif-button");
 crearGifBtn.addEventListener("mouseover", (e) => {
-    e.target.src = "../img/CTA-crear-gifo-hover.svg";
+    e.target.src = "./img/CTA-crear-gifo-hover.svg";
 });
 crearGifBtn.addEventListener("mouseout", (e) => {
-    e.target.src = "../img/CTA-crear-gifo-active.svg";
+    e.target.src = "./img/CTA-crear-gifo-active.svg";
 });
