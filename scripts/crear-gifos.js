@@ -125,7 +125,7 @@ startButton.addEventListener("click", () => {
                     overlay.classList.add("overlay");
                     
                     const loader = document.createElement("img");
-                    loader.src = "../img/loader.svg";
+                    loader.src = "./img/loader.svg";
                     loader.classList.add("loader");
 
                     const uploadingText = document.createElement("p");
@@ -162,13 +162,13 @@ startButton.addEventListener("click", () => {
                         // linkAnchor.setAttribute("href", `https://giphy.com/gifs/${result.data.id}?api_key=${API_KEY}`);
                         // linkAnchor.setAttribute("download", "MyGif");
                         linkAnchor.classList.add("link-anchor");
-                        downloadButton.src = "../img/icon-download.svg";
+                        downloadButton.src = "./img/icon-download.svg";
                         downloadButton.classList.add("download-button");
                         downloadButton.addEventListener("mouseover", () => {
-                            downloadButton.src = "../img/icon-download-hover.svg"
+                            downloadButton.src = "./img/icon-download-hover.svg"
                         });
                         downloadButton.addEventListener("mouseout", () => {
-                            downloadButton.src = "../img/icon-download.svg"
+                            downloadButton.src = "./img/icon-download.svg"
                         });
                         downloadButton.addEventListener("click", async () => {
                             //agregar funcionalidad de click
@@ -185,13 +185,13 @@ startButton.addEventListener("click", () => {
                         });
 
                         const linkButton = document.createElement("img");
-                        linkButton.src = "../img/icon-link-normal.svg";
+                        linkButton.src = "./img/icon-link-normal.svg";
                         linkButton.classList.add("link-button");
                         linkButton.addEventListener("mouseover", () => {
-                            linkButton.src = "../img/icon-link-hover.svg"
+                            linkButton.src = "./img/icon-link-hover.svg"
                         });
                         linkButton.addEventListener("mouseout", () => {
-                            linkButton.src = "../img/icon-link-normal.svg"
+                            linkButton.src = "./img/icon-link-normal.svg"
                         });
                         linkButton.addEventListener("click", () => {
                             //agregar funcionalidad de click
@@ -209,7 +209,7 @@ startButton.addEventListener("click", () => {
 
 
                         const tick = document.createElement("img");
-                        tick.src = "../img/check.svg";
+                        tick.src = "./img/check.svg";
                         tick.classList.add("tick");
 
                         const successText = document.createElement("p");
